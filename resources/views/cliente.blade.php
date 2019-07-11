@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Cliente
+                    {{ $title }}
                 </div>
 
                 <div class="links">
