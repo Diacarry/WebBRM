@@ -12,11 +12,11 @@ class CreateColumnsInIngresos extends Migration {
      */
     public function up() {
         Schema::table('ingresos', function (Blueprint $table) {
-            $table->string('fk_inventario', 70);
-            $table->integer('cantidad');
+            /*$table->string('fk_inventario', 70);*/
+            /*$table->integer('cantidad');
             $table->integer('numero_lote');
             $table->date('fecha_vencimiento');
-            $table->integer('precio_unitario');
+            $table->integer('precio_unitario');*/
         });
     }
     /**

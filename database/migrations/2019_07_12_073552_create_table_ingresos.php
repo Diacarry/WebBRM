@@ -13,6 +13,11 @@ class CreateTableIngresos extends Migration {
     public function up() {
         Schema::create('ingresos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedInteger('fk_inventario');
+            $table->integer('cantidad');
+            $table->integer('numero_lote');
+            $table->date('fecha_vencimiento');
+            $table->integer('precio_unitario');
             $table->timestamps();
         });
     }

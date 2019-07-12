@@ -12,7 +12,7 @@ class CreateColumnsInCompras extends Migration {
      */
     public function up() {
         Schema::table('compras', function (Blueprint $table) {
-            $table->string('fk_inventario', 70);
+            /*$table->string('fk_inventario', 70);*/
             $table->integer('cantidad_producto');
             $table->integer('valor_unitario_compra_producto');
             $table->integer('total_pedido');
