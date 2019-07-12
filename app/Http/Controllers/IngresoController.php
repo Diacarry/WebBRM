@@ -32,7 +32,7 @@ class IngresoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        /** CODE */
     }
     /**
      * Display the specified resource.
