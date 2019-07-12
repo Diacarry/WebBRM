@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\compra;
 use Illuminate\Http\Request;
 
 class CompraController extends Controller {
@@ -11,7 +12,10 @@ class CompraController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        //
+        /*return compra::all();*/
+        return view('cliente',[
+            'compras' => compra::all()
+        ]);
     }
     /**
      * Show the form for creating a new resource.
@@ -19,7 +23,7 @@ class CompraController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        //
+        return view('clienteCreate');
     }
     /**
      * Store a newly created resource in storage.

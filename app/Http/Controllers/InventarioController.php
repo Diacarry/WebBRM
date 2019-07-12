@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\inventario;
 use Illuminate\Http\Request;
 
 class InventarioController extends Controller {
@@ -11,7 +12,10 @@ class InventarioController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        //
+        /*return inventario::all();*/
+        return view('admin',[
+            'inventarios' => inventario::all()
+        ]);
     }
     /**
      * Show the form for creating a new resource.
@@ -19,7 +23,7 @@ class InventarioController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        //
+        return view('adminCreate');
     }
     /**
      * Store a newly created resource in storage.
