@@ -12,7 +12,9 @@ class CreateColumnsInInventarios extends Migration {
      */
     public function up() {
         Schema::table('inventarios', function (Blueprint $table) {
-            /* */
+            $table->string('producto', 70);
+            $table->integer('precio_unitario_actual');
+            $table->integer('cantidad_disponible');
         });
     }
 
@@ -23,7 +25,9 @@ class CreateColumnsInInventarios extends Migration {
      */
     public function down() {
         Schema::table('inventarios', function (Blueprint $table) {
-            //
+            $table->dropColumn('producto');
+            $table->dropColumn('precio_unitario_actual');
+            $table->dropColumn('cantidad_disponible');
         });
     }
 }
