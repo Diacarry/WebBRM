@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ingreso;
 use Illuminate\Http\Request;
 
 class IngresoController extends Controller {
@@ -11,7 +12,10 @@ class IngresoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        //
+        /*return ingreso::all();*/
+        return view('proveedor',[
+            'ingresos' => ingreso::all()
+        ]);
     }
     /**
      * Show the form for creating a new resource.
@@ -19,7 +23,7 @@ class IngresoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        //
+        return view('proveedorCreate');
     }
     /**
      * Store a newly created resource in storage.
