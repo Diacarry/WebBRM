@@ -32,7 +32,14 @@ class CompraController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        $report = new compra();
+        $report->fk_inventario = $request->get('IngresoProduct');
+        $report->cantidad_producto = $request->get('ProductCant');
+        $report->valor_unitario_compra_producto = 649000; /* VALOR QUEMADO DEL X-BOX */
+        $total = $request->get('ProductCant') * $report->valor_unitario_compra_producto;
+        $report->total_pedido = $total;
+        $report->save();
+        return redirect('/CrudCompra');
     }
     /**
      * Display the specified resource.

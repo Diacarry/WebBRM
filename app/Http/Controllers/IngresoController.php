@@ -32,7 +32,14 @@ class IngresoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        /** CODE */
+        $report = new ingreso();
+        $report->fk_inventario = $request->get('IngresoProduct');
+        $report->cantidad = $request->get('IngresoProductCant');
+        $report->numero_lote = $request->get('NumLote');
+        $report->fecha_vencimiento = $request->get('FechaVencimiento');
+        $report->precio_unitario = $request->get('ProductCost');
+        $report->save();
+        return redirect('/CrudIngreso');
     }
     /**
      * Display the specified resource.

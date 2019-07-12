@@ -14,10 +14,10 @@
                 @csrf
                 <div class="form-group">
                     <label for="IngresoProduct">Seleccione el producto que desea ingresar</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="IngresoProduct" name="IngresoProduct">
                         <option>Select de Productos</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
+                        <option value="Arroz_libra">Libra arroz Roa</option>
+                        <option value="Frijol_libra">Libra de frijol Rojo</option>
                     </select>
                 </div>
                 <div class="form-group row">
