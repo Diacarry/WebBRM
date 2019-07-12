@@ -12,3 +12,5 @@ Route::get('/Proveedor', 'ProveedorController@Inicio');
 Route::get('/Cliente', 'ClienteController@Inicio');
 
 Route::resource('/CrudInventario', 'InventarioController');
+Route::resource('/CrudIngreso', 'IngresoController');
+Route::resource('/CrudCompra', 'CompraController');
