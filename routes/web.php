@@ -10,3 +10,5 @@ Route::get('/', 'InicioController@Inicio');
 Route::get('/Admin', 'AdminController@Inicio');
 Route::get('/Proveedor', 'ProveedorController@Inicio');
 Route::get('/Cliente', 'ClienteController@Inicio');
+
+Route::resource('/CrudInventario', 'InventarioController');
