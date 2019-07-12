@@ -13,7 +13,10 @@ class CreateTableCompras extends Migration {
     public function up() {
         Schema::create('compras', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('fk_inventario');
+            /*$table->string('fk_inventario', 70);
+            $table->integer('cantidad_producto');
+            $table->integer('valor_unitario_compra_producto');
+            $table->integer('total_pedido');*/
             $table->timestamps();
         });
     }
