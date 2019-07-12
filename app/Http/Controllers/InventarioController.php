@@ -32,7 +32,12 @@ class InventarioController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        $report = new inventario();
+        $report->producto = $request->get('ProductName');
+        $report->precio_unitario_actual = $request->get('ProductCant');
+        $report->cantidad_disponible = $request->get('ProductCost');
+        $report->save();
+        return redirect('/CrudInventario');
     }
     /**
      * Display the specified resource.

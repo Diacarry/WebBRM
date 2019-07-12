@@ -4,7 +4,6 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class compra extends Model
-{
+class compra extends Model {
     //
 }

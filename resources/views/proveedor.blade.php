@@ -1,12 +1,10 @@
 @extends('layouts.template')
 @section('inicialPage')
     <div class="row">
-        <div class="col">
+        <div class="col-md-9">
             <h3>REGISTRO DE ENTRADAS DE INVENTARIO</h3>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
+        <div class="col-md-3">
             <a href="/CrudIngreso/create" class="btn btn-success">Crear ingreso a tienda</a>
         </div>
     </div>
