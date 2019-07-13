@@ -5,7 +5,7 @@
             <h3>REGISTRAR NUEVO PRODUCTO AL INVENTARIO</h3>
         </div>
         <div class="col-md-3">
-            <a href="/CrudCompra" class="btn btn-success">volver</a>
+            <a href="/CrudCompra" class="btn btn-danger">volver</a>
         </div>
     </div><br>
     <div class="row">

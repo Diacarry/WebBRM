@@ -9,7 +9,7 @@
     <title>WEBBRM</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container"><br>
         @yield('inicialPage')
     </div>
     <!-- Optional JavaScript -->

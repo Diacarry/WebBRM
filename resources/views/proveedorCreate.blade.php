@@ -5,7 +5,7 @@
             <h3>REGISTRAR DE ENTRADAS AL INVENTARIO</h3>
         </div>
         <div class="col-md-3">
-            <a href="/CrudIngreso" class="btn btn-success">volver</a>
+            <a href="/CrudIngreso" class="btn btn-danger">volver</a>
         </div>
     </div><br>
     <div class="row">

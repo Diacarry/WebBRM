@@ -81,18 +81,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <h1>WEB-BRM</h1>
                 </div>
+                <p>El siguiente programa gestiona un abastecimiento de alimentos</p>
+                <p>elija una opción</p>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <a href="/CrudInventario" class="btn btn-success">Administrador</a>|
+                <a href="/CrudIngreso" class="btn btn-success">Proveedor</a>|
+                <a href="/CrudCompra" class="btn btn-success">Cliente</a>
             </div>
         </div>
     </body>
