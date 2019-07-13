@@ -10,12 +10,21 @@
     </div><br>
     <div class="row">
         <div class="col">
+            @if($errors->any())
+                <div class="alert alert-danger" role="alert">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form action="/CrudCompra" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="IngresoProduct">Seleccione el producto que desea ingresar</label>
                     <select class="form-control" id="IngresoProduct" name="IngresoProduct">
-                        <option>Select de Productos</option>
+                        <option value="">Select de Productos</option>
                         <option value="Arroz_libra">Libra arroz Roa</option>
                         <option value="Frijol_libra">Libra de frijol Rojo</option>
                     </select>
@@ -23,7 +32,7 @@
                 <div class="form-group row">
                     <label for="ProductCant" class="col-sm-2 col-form-label">CANTIDAD:</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="ProductCant" name="ProductCant" placeholder="Ingrese la cantidad disponible que esta ingresando">
+                        <input type="number" class="form-control" id="ProductCant" name="ProductCant" placeholder="Ingrese la cantidad disponible que esta ingresando" value="{{ old('ProductCant') }}">
                     </div>
                 </div>
                 <div class="form-group row">

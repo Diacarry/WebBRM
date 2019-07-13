@@ -32,6 +32,11 @@ class InventarioController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
+        $validData = $request->validate([
+            'ProductName' => 'required|min:8|max:30',
+            'ProductCant' => 'required|min:1|max:2',
+            'ProductCost' => 'required|min:3|max:7'
+        ]);
         $report = new inventario();
         $report->producto = $request->get('ProductName');
         $report->precio_unitario_actual = $request->get('ProductCant');

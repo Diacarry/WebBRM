@@ -32,6 +32,13 @@ class IngresoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
+        $validData = $request->validate([
+            'IngresoProduct' => 'required',
+            'IngresoProductCant' => 'required|min:1|max:3',
+            'NumLote' => 'required|min:5|max:10',
+            'FechaVencimiento' => 'required|min:9|max:11',
+            'ProductCost' => 'required|min:4|max:7'
+        ]);
         $report = new ingreso();
         $report->fk_inventario = $request->get('IngresoProduct');
         $report->cantidad = $request->get('IngresoProductCant');
